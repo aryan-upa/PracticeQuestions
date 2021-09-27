@@ -55,6 +55,9 @@ public class Array {
         }
         System.out.println("No. of odds : " + odd);
         System.out.println("No. of evens : " + eve);
+
+        float[] arr2 = new float[5];
+
     }
 }
 
