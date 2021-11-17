@@ -12,9 +12,7 @@ public class CheckEmail {
     }
 
     public boolean CheckString(String ch){
-        if(this.getMail().indexOf(ch)>=0)
-            return true;
-        return false;
+        return this.getMail().indexOf(ch, this.getMail().indexOf("@")) >= 0;
     }
 
     public static void main(String[] args) {
