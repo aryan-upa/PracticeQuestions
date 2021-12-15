@@ -19,7 +19,7 @@ class Execution{
     public static void main(String[] args) {
         Student stu1 = new Student();
         Student stu2 = new Student("Aryan");
-        System.out.println("Stu1 name : "+stu1.getName());
-        System.out.println("Stu2 name : "+stu2.getName());
+        System.out.println("Stu1 name : "+ stu1.getName());
+        System.out.println("Stu2 name : "+ stu2.getName());
     }
 }

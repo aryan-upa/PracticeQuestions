@@ -6,13 +6,13 @@ public class AbsImp {
     }
 }
 
-interface A{
+interface A {
     int a = 10;
     int b = 20;
     abstract void fun1();
 }
 
-interface B{
+interface B {
     int c = 20;
     abstract void fun2();
 }
