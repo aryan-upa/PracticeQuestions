@@ -40,6 +40,74 @@ public class Employee {
         System.out.println("Employee address : " + Address);
     }
 
+    /*
+    Static: Name if the class : Class Owned
+    Non-Static: Name if the class' object : Object Owned
+        But, if we are accessing it inside the class then we need not write the object's name.
+
+    We can call a static method inside a non-static method, but we can not call a non-static method inside a static
+        method.
+     */
+
+    //static method
+    private static byte countNumberofEmployeesInTeam(String teamName) {
+        return (byte) 0;
+    }
+
+    private static short countNumberOfPeopleForOfficeParty() {
+        return (short) (countNumberofEmployeesInTeam("Sales") +
+                        countNumberofEmployeesInTeam("Engineering") +
+                        countNumberofEmployeesInTeam("HR") +
+                        countNumberofEmployeesInTeam("Accounts") +
+                        countNumberofEmployeesInTeam("Legal"));
+    }
+
+
+    //non-static method
+    private void performTask(String task){
+
+    }
+
+    private void showPresentation(String presentationTopic){
+        performTask("Show Presentation on" + presentationTopic);
+    }
+
+    /*
+    Input : Parameters List :
+        We can declare variables inside the parentheses of a method.
+        1. Java primitive type -> byte, short, int, long ...
+        2. Java referenced type -> String, BigInteger, BigDecimal, Java Arrays
+
+        1. When we want to input multiple values...
+            if the data type of the values are different...
+                We declare different variable of different data types.
+            if the data type of the variable is same...
+                We declare an array of that data type
+     */
+
+    private void doNothing(char a, byte b) {
+    }
+
+    private void doNothing(int[] a) {
+    }
+
+    /*
+    Output : Return type :
+    We write the return type of the value(s) to be returned by the method.
+        1. Java primitive type -> byte, short, int, long ... + void
+        2. Java referenced type -> String, BigInteger, BigDecimal, Java Arrays
+     */
+
+    private int returnSome(){
+        return 0;
+    }
+
+    private int[] returnANumberOfSome(){
+        return new int[10];
+    }
+
+
+
     /**
     Main Method...
      */
