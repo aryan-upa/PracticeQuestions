@@ -5,16 +5,16 @@ import java.util.Scanner;
  */
 public class Employee {
     /**
-    name : String : The name of the Employee.
-     */
+     * name : String : The name of the Employee.
+     * */
     String name;
-     /**
-     DOJ : Integer : The date of joining of the Employee.
-      */
+    /**
+     * DOJ : Integer : The date of joining of the Employee.
+     * */
     Integer DOJ;
      /**
-     Address : String : The Address of the Employee.
-      */
+      * Address : String : The Address of the Employee.
+      * */
     String Address;
 
     /**
