@@ -77,7 +77,7 @@ function createSearchPattern(term) {
             // whitespace between identifiers is significant
             pattern += (isWordToken && /^\w/.test(w)) ? "\\s+" : "\\s*";
         }
-        var tokens = w.split(/(?=[A-Z,.()<>[\/])/);
+        var tokens = w.split(/(?=[Examples.A-Z,.()<>[\/])/);
         for (var i = 0; i < tokens.length; i++) {
             var s = tokens[i];
             if (s === "") {
@@ -93,7 +93,7 @@ function createSearchPattern(term) {
     return pattern;
 }
 function createMatcher(pattern, flags) {
-    var isCamelCase = /[A-Z]/.test(pattern);
+    var isCamelCase = /[Examples.A-Z]/.test(pattern);
     return new RegExp(pattern, flags + (isCamelCase ? "" : "i"));
 }
 var watermark = 'Search';
@@ -195,7 +195,7 @@ function rankMatch(match, category) {
     // make sure match is anchored on a left word boundary
     if (index === 0 || /\W/.test(input[index - 1]) || "_" === input[index]) {
         leftBoundaryMatch = 0;
-    } else if ("_" === input[index - 1] || (input[index] === input[index].toUpperCase() && !/^[A-Z0-9_$]+$/.test(input))) {
+    } else if ("_" === input[index - 1] || (input[index] === input[index].toUpperCase() && !/^[Examples.A-Z0-9_$]+$/.test(input))) {
         leftBoundaryMatch = 1;
     }
     var matchEnd = index + match[0].length;
@@ -218,9 +218,9 @@ function rankMatch(match, category) {
     }
     if (category === catTypes) {
         // lower ranking if a type name contains unmatched camel-case parts
-        if (/[A-Z]/.test(input.substring(matchEnd)))
+        if (/[Examples.A-Z]/.test(input.substring(matchEnd)))
             delta += 5;
-        if (/[A-Z]/.test(input.substring(0, index)))
+        if (/[Examples.A-Z]/.test(input.substring(0, index)))
             delta += 5;
     }
     return leftBoundaryMatch + periferalMatch + (delta / 200);
